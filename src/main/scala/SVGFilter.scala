@@ -4,8 +4,8 @@ import jdk.internal.org.xml.sax.InputSource
 import jdk.internal.util.xml.impl.XMLWriter
 import org.xml.sax.helpers.XMLReaderFactory
 
-object SVGFilter {
-	def main(args: Array[String]) : Unit = { println(function(inputSVG)}
+object SVGStrokeFilter {
+	//def main(args: Array[String]) : Unit = { println(function(inputSVG)}
 
 	def function(svg: scala.xml.Elem) = println(svg)
 
