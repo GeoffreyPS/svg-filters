@@ -8,7 +8,7 @@ class StrokeTransformer extends scala.xml.transform.RewriteRule {
     case e@Elem(_, _, attribute("stroke-width"), _, _, child@_*) =>
   }
 
-  val unitsPattern = """(\d*\.*\d*)(\w*)""".r
+  val unitsPattern = """(\d*\.?\d*)(\w*)""".r
 
   def separateUnits(n: Node): Tuple2[Double, String] =
     n.text match {
