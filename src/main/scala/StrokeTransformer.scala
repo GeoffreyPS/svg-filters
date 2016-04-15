@@ -16,4 +16,6 @@ class StrokeTransformer extends scala.xml.transform.RewriteRule {
       //case x => x
     }
 
+  def calculateValue(t: Tuple2[Double, String], m: Double): String =
+    s"${t._1 * m}${t._2}"
 }
