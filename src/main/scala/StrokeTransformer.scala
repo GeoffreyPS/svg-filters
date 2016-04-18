@@ -6,10 +6,10 @@ import scala.xml._
 
 class StrokeTransformer extends scala.xml.transform.RewriteRule {
   override def transform(n: Node, m: Double): Seq[Node] = n match {
-    case elem @ Elem(_, _, Attribute("stroke-width"), _, _, child @ _*) =>
-        elem.asInstanceOf[Elem] % Attribute(None, key: "stroke-width", Text(multiplyStrokeVal(m, elem.attribute("stroke-width"))) , Null) copy(child = child map transform)
-    case elem @ Elem(_, _, _, _, child @ _*) =>
-      elem.asInstanceOf[Elem].copy(child = child map transform)
+    case elem @ Node(_, _, Attribute("stroke-width", _, _), _, _, child @ _*) =>
+        elem.asInstanceOf[Elem] % Attribute("stroke-width", Text(multiplyStrokeVal(m, elem.attribute("stroke-width").get.head)), Null) copy(child = transform(child, m))
+    case elem @ Node(_, _, _, _, child @ _*) =>
+      elem.asInstanceOf[Node].copy(child = transform(child, m))
     case other => other
   }
 
@@ -28,14 +28,4 @@ class StrokeTransformer extends scala.xml.transform.RewriteRule {
   def multiplyStrokeVal(m: Double, n: Node): String = {
     calculateValue(separateUnits(n), m)
   }
-}
-
-
-
-def updateBar(node: Node): Node = node match {
-  case elem @ Elem(_, "bar", _, _, child @ _*) =>
-    elem.asInstanceOf[Elem] % Attribute(None, "newKey", Text("newValue"), Null) copy(child = child map updateBar)
-  case elem @ Elem(_, _, _, _, child @ _*) =>
-    elem.asInstanceOf[Elem].copy(child = child map updateBar)
-  case other => other
 }
