@@ -5,15 +5,17 @@ import scala.util.matching.Regex
 import scala.xml._
 
 class StrokeTransformer extends scala.xml.transform.RewriteRule {
-  override def transform(n: Node, m: Double): Seq[Node] = n match {
+  def transform(n: Node, m: Double): Node = n match {
     case elem @ Node(_, _, Attribute("stroke-width", _, _), _, _, child @ _*) =>
-        elem.asInstanceOf[Elem] % Attribute("stroke-width", Text(multiplyStrokeVal(m, elem.attribute("stroke-width").get.head)), Null) copy(child = transform(child, m))
+      val el = updateStroke(elem, m)
+      el.copy(child = child map (c => transform(c, m)))
     case elem @ Node(_, _, _, _, child @ _*) =>
-      elem.asInstanceOf[Node].copy(child = transform(child, m))
+      elem.asInstanceOf[Elem].copy(child = child map(c => transform(c, m)))
     case other => other
   }
 
   val unitsPattern: Regex = """(\d*\.?\d*)(\w*)""".r
+
 
   def separateUnits(n: Node): Tuple2[Double, String] =
     n.text match {
@@ -28,4 +30,9 @@ class StrokeTransformer extends scala.xml.transform.RewriteRule {
   def multiplyStrokeVal(m: Double, n: Node): String = {
     calculateValue(separateUnits(n), m)
   }
+
+  def updateStroke(n: Node, m: Double): Elem = {
+    n.asInstanceOf[Elem] % Attribute("stroke-width", Text(multiplyStrokeVal(m, n.attribute("stroke-width").get.head)), Null)
+  }
+
 }
