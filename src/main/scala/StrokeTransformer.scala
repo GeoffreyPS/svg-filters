@@ -4,13 +4,13 @@
 import scala.util.matching.Regex
 import scala.xml._
 
-class StrokeTransformer extends scala.xml.transform.RewriteRule {
-  def transform(n: Node, m: Double): Node = n match {
+class StrokeTransformer(factor: Double) extends scala.xml.transform.RewriteRule {
+  override def transform(n: Node): Node = n match {
     case elem @ Elem(_, _, Attribute("stroke-width", _, _), _, _, child @ _*) =>
-      val el = updateStroke(elem, m)
-      el.copy(child = child map (c => transform(c, m)))
+      val el = updateStroke(elem, factor)
+      el.copy(child = child map transform)
     case elem @ Elem(_, _, _, _, child @ _*) =>
-      elem.asInstanceOf[Elem].copy(child = child map(c => transform(c, m)))
+      elem.asInstanceOf[Elem].copy(child = child map transform)
     case other => other
   }
 
