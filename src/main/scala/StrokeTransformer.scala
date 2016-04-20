@@ -16,21 +16,21 @@ class StrokeTransformer(factor: Double) extends scala.xml.transform.RewriteRule 
 
   val unitsPattern: Regex = """(\d*\.?\d*)(\w*)""".r
 
-  def separateUnits(n: Node): Tuple2[Double, String] =
+  private def separateUnits(n: Node): Tuple2[Double, String] =
     n.text match {
       case unitsPattern(values, units) => new Tuple2(values.toDouble, units)
       //case x => x
     }
 
-  def calculateValue(t: Tuple2[Double, String], m: Double): String = {
+  private def calculateValue(t: Tuple2[Double, String], m: Double): String = {
     s"${t._1 * m}${t._2}"
   }
 
-  def multiplyStrokeVal(m: Double, n: Node): String = {
+  private def multiplyStrokeVal(m: Double, n: Node): String = {
     calculateValue(separateUnits(n), m)
   }
 
-  def updateStroke(n: Node, m: Double): Elem = {
+  private def updateStroke(n: Node, m: Double): Elem = {
     n.asInstanceOf[Elem] % Attribute("stroke-width", Text(multiplyStrokeVal(m, n.attribute("stroke-width").get.head)), Null)
   }
 
