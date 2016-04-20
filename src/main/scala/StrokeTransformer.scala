@@ -5,12 +5,10 @@ import scala.util.matching.Regex
 import scala.xml._
 
 class StrokeTransformer(factor: Double) extends scala.xml.transform.RewriteRule {
-  override def transform(n: Node): Node = n match {
-    case elem @ Elem(_, _, Attribute("stroke-width", _, _), _, _, child @ _*) =>
-      val el = updateStroke(elem, factor)
-      el.copy(child = child map transform)
-    case elem @ Elem(_, _, _, _, child @ _*) =>
-      elem.asInstanceOf[Elem].copy(child = child map transform)
+
+  override def transform(n: Node): Seq[Node] = n match {
+    case elem @ Elem(_, _, Attribute("stroke-width", _, _), _, _, _*) =>
+      updateStroke(elem, factor)
     case other => other
   }
 
@@ -33,5 +31,4 @@ class StrokeTransformer(factor: Double) extends scala.xml.transform.RewriteRule 
   private def updateStroke(n: Node, m: Double): Elem = {
     n.asInstanceOf[Elem] % Attribute("stroke-width", Text(multiplyStrokeVal(m, n.attribute("stroke-width").get.head)), Null)
   }
-
 }
