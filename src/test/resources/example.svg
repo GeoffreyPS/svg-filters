@@ -1,0 +1,11 @@
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70.58 83.76">
+  <title>example</title>
+  <path d="M13,85.23C29.16,65,31.23,75.55,31.23,67S13.42,62.9,35.35,62.9,50.71,74.77,50.71,74.77,44.71,96,37.1,88.39,13,85.23,13,85.23Z" transform="translate(-12.65 -6.42)" fill="#fff" stroke="#000" stroke-miterlimit="10" stroke-width="0.28"/>
+  <line x1="69.54" y1="41.26" x2="61.8" y2="80.48" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2.13"/>
+  <g id="Layer_2" data-name="Layer 2">
+    <g>
+      <path d="M44.13,37.87H13V6.77h31.1v31.1Zm17.46-26.1H17.81V55.55H61.59V11.77Z" transform="translate(-12.65 -6.42)" fill="#fff" stroke="#000" stroke-miterlimit="10" stroke-width="0.71"/>
+      <rect x="13.93" y="14.64" width="31.1" height="31.1" fill="#fbb03b" stroke="#000" stroke-miterlimit="10" stroke-width="2.83"/>
+    </g>
+  </g>
+</svg>
