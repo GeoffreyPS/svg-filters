@@ -1,11 +1,44 @@
-<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 70.58 83.76">
-  <title>example</title>
-  <path d="M13,85.23C29.16,65,31.23,75.55,31.23,67S13.42,62.9,35.35,62.9,50.71,74.77,50.71,74.77,44.71,96,37.1,88.39,13,85.23,13,85.23Z" transform="translate(-12.65 -6.42)" fill="#fff" stroke="#000" stroke-miterlimit="10" stroke-width="0.28"/>
-  <line x1="69.54" y1="41.26" x2="61.8" y2="80.48" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="2.13"/>
-  <g id="Layer_2" data-name="Layer 2">
-    <g>
-      <path d="M44.13,37.87H13V6.77h31.1v31.1Zm17.46-26.1H17.81V55.55H61.59V11.77Z" transform="translate(-12.65 -6.42)" fill="#fff" stroke="#000" stroke-miterlimit="10" stroke-width="0.71"/>
-      <rect x="13.93" y="14.64" width="31.1" height="31.1" fill="#fbb03b" stroke="#000" stroke-miterlimit="10" stroke-width="2.83"/>
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" width="100.14" height="89.73" viewBox="0 0 100.14 89.73">
+  <title>Untitled-1</title>
+  <g id="Layer_2.2" data-name="Layer 2.2">
+    <g id="Layer_3.2" data-name="Layer 3.2">
+      <g id="Layer_4.1" data-name="Layer 4.1">
+        <path d="M82.46,18.59a5.57,5.57,0,0,1-7.87,0,4.45,4.45,0,0,1,0-6.3,3.56,3.56,0,0,1,5,0,2.85,2.85,0,0,1,0,4,2.28,2.28,0,0,1-3.22,0,1.82,1.82,0,0,1,0-2.58,1.46,1.46,0,0,1,2.06,0" transform="translate(-5.29 -5.09)" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="1.42"/>
+        <g>
+          <polygon points="94.14 41.09 82.25 41.7 75.78 31.7 81.2 21.1 93.1 20.49 99.57 30.49 94.14 41.09" fill="#c1272d" stroke="#000" stroke-miterlimit="10"/>
+          <g>
+            <path d="M86.94,30.84c-2.13,10.24,3,9.87,3,9.87l2.18-7.87-1.88-3.55" transform="translate(-5.29 -5.09)" fill="none" stroke="#000" stroke-miterlimit="10"/>
+            <line x1="90.28" y1="29.9" x2="88.77" y2="37.65" fill="none" stroke="#000" stroke-miterlimit="10"/>
+            <line x1="90.39" y1="26.14" x2="86.83" y2="23.44" fill="none" stroke="#000" stroke-miterlimit="10"/>
+          </g>
+        </g>
+      </g>
+      <line x1="56.69" y1="75.91" x2="68.1" y2="75.91" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.71"/>
+      <polygon points="72.52 86.03 58.69 89.73 48.58 79.61 52.28 65.79 66.1 62.09 76.22 72.21 72.52 86.03" fill="#0071bc"/>
+      <g>
+        <circle cx="84.87" cy="65.75" r="3.34" fill="#d4145a" stroke="#000" stroke-miterlimit="10" stroke-width="0.71"/>
+        <circle cx="77.01" cy="57.67" r="3.77" fill="#d4145a" stroke="#000" stroke-miterlimit="10" stroke-width="0.71"/>
+        <circle cx="83.04" cy="76.87" r="2.96" fill="#d4145a" stroke="#000" stroke-miterlimit="10" stroke-width="0.71"/>
+      </g>
     </g>
+    <g id="Layer_3.1" data-name="Layer 3.1">
+      <polyline points="7.61 70.48 14.39 66.72 16.54 76.83 10.84 81.89 5.67 78.23" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.71"/>
+      <line x1="20.09" y1="69.73" x2="31.5" y2="69.73" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.71"/>
+      <polygon points="26.68 77.27 35.16 82.86 30 85.55 25.8 82.97 26.68 77.27" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.71"/>
+    </g>
+  </g>
+  <g id="Layer_2.1" data-name="Layer 2.1">
+    <g id="Layer_3.1-2" data-name="Layer 3.1">
+      <line x1="49.37" y1="45.62" x2="62.4" y2="45.62" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.71"/>
+      <g>
+        <rect x="2.12" y="22.15" width="42.41" height="35.95" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.71"/>
+        <rect x="14.39" y="33.24" width="24.57" height="22.12" fill="#fbb03b" stroke="#000" stroke-miterlimit="10" stroke-width="1.42"/>
+      </g>
+      <rect x="48.4" y="22.15" width="19.38" height="20.67" fill="#009245" stroke="#000" stroke-miterlimit="10" stroke-width="0.28"/>
+    </g>
+    <text transform="translate(2.12 8.37)" font-size="10" font-family="Myriad Pro">T<tspan x="4.26" y="0">e</tspan><tspan x="9.24" y="0">x</tspan><tspan x="14" y="0">t</tspan></text>
+    <text transform="translate(0.72 17.63)" font-size="10" stroke="#000" stroke-miterlimit="10" stroke-width="0.71" font-family="Myriad Pro">T<tspan x="4.26" y="0">e</tspan><tspan x="9.24" y="0">x</tspan><tspan x="14" y="0">t</tspan><tspan x="17.26" y="0">-</tspan><tspan x="20.33" y="0">S</tspan><tspan x="25.23" y="0">t</tspan><tspan x="28.54" y="0">r</tspan><tspan x="31.71" y="0">oke</tspan></text>
+    <line x1="32.47" y1="5.15" x2="47.44" y2="5.15" fill="none" stroke="#000" stroke-miterlimit="10" stroke-width="0.71"/>
   </g>
 </svg>
