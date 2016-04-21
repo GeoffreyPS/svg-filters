@@ -16,8 +16,4 @@ class StrokeTransformerTest extends FlatSpec with Matchers {
     assert(newStrokeWidth.text == "0.6mm")
   }
 
-
-  "The truth" should "be true" in {
-    assert(true == true)
-  }
 }
