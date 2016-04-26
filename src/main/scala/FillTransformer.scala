@@ -6,12 +6,13 @@ import scala.xml._
 class FillTransformer(color: String, set: Set[String]) extends scala.xml.transform.RewriteRule {
 
   override def transform(n: Node): Seq[Node] = {
-    val d = (n \ "@id").text
-    n match {
-      case set contains d =>
-        addFill(elem, color)
-      case other => other
-    }
+    if (checkID(n, set)) addFill(n, color)
+    else n
+  }
+
+  def checkID(n: Node, s: Set[String]): Boolean = {
+    val id = (n \ "@id").text
+    s contains id
   }
 
   def addFill(n: Node, color: String): Elem = {
