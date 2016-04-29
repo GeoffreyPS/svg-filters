@@ -11,7 +11,7 @@ class FillTransformer(color: String, attribute: String, set: Set[String]) extend
   }
 
   def checkID(n: Node, s: Set[String]): Boolean = {
-    val id = n.attribute(attribute).head.text
+    val id = (n \ s"@$attribute").text
     s contains id
   }
 

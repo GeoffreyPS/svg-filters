@@ -5,11 +5,12 @@ import scala.xml.{Node, NodeSeq}
   */
 class NamespacedFillTransformer(color: String, namespace: String, attribute: String, set: Set[String]) extends FillTransformer(color: String, attribute: String, set: Set[String]) {
  override def checkID(n: Node, s: Set[String]): Boolean = {
-   n.attribute(n.getNamespace(namespace), attribute) match {
-     case id @ None =>
-       false
-     case id @ _ =>
-       s contains id.head.text
-   }
+   val id = (n \ generateID(n)).text
+   s contains id
  }
+
+  def generateID(n: Node): String = {
+    val ns = n.getNamespace(namespace)
+    s"@{$ns}$attribute"
+  }
 }
