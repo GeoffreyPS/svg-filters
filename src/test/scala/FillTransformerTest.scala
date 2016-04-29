@@ -11,13 +11,13 @@ class FillTransformerTest extends FlatSpec with Matchers {
 
   val idSet: Set[String] = Set("example")
   val attribute: String = "id"
-  val rule = new RuleTransformer(new FillTransformer("#FFFF00",  attribute, idSet))
+  val rule = new RuleTransformer(FillTransformerGenerator("#FFFF99",  attribute, idSet))
 
   "FillTransformer" should "Add a fill color based on a set of IDs" in {
     val transformedXML = rule(originalXML)
     val newFillColor = transformedXML \ "@fill"
 
-    assert(newFillColor.text == "#FFFF00")
+    assert(newFillColor.text == "#FFFF99")
   }
 
   "FillTransformer" should "not add a fill to XML elements outside of the set of IDs" in {
