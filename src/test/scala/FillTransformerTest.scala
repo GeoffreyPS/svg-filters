@@ -10,7 +10,8 @@ class FillTransformerTest extends FlatSpec with Matchers {
   val untouchedXML: scala.xml.Node = <g id="not-in-set" stroke-width="0.15mm" stroke="#FFFF00">233.11</g>
 
   val idSet: Set[String] = Set("example")
-  val rule = new RuleTransformer(new FillTransformer("#FFFF00", idSet))
+  val attribute: String = "id"
+  val rule = new RuleTransformer(new FillTransformer("#FFFF00",  attribute, idSet))
 
   "FillTransformer" should "Add a fill color based on a set of IDs" in {
     val transformedXML = rule(originalXML)
