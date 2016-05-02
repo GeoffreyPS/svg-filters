@@ -13,7 +13,7 @@ class FillTransformer(color: String, attribute: String, set: Set[String]) extend
   }
 
   def rightChild(n: Node): Boolean = {
-    n.child.exists(checkID(_, `set`))
+    n.child.par.exists(checkID(_, `set`))
   }
 
   def checkID(n: Node, s: Set[String]): Boolean = {
