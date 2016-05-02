@@ -6,8 +6,8 @@ import scala.xml.transform.RuleTransformer
 
 class FillTransformerTest extends FlatSpec with Matchers {
 
-  val originalXML: scala.xml.Node = <g id="example" stroke-width="0.15mm" stroke="#FFFF00">233.11</g>
-  val untouchedXML: scala.xml.Node = <g id="not-in-set" stroke-width="0.15mm" stroke="#FFFF00">233.11</g>
+  val originalXML: scala.xml.Node = <g stroke-width="0.15mm" stroke="#FFFF00"><child id="example">233.11</child></g>
+  val untouchedXML: scala.xml.Node = <g stroke-width="0.15mm" stroke="#FFFF00"><child id="not-in-set">233.11</child></g>
 
   val idSet: Set[String] = Set("example")
   val attribute: String = "id"
