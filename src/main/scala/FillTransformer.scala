@@ -5,9 +5,15 @@ import scala.xml._
 
 class FillTransformer(color: String, attribute: String, set: Set[String]) extends scala.xml.transform.RewriteRule {
 
-  override def transform(n: Node): Seq[Node] = {
-    if (checkID(n, set)) addFill(n, color)
-    else n
+  override def transform(n: Node): Seq[Node] = n match {
+    case elem @ Elem(_, "g", _, _, _, _*) =>
+      if (rightChild(elem)) addFill(elem, color)
+      else elem
+    case other => other
+  }
+
+  def rightChild(n: Node): Boolean = {
+    n.child.exists(checkID(_, `set`))
   }
 
   def checkID(n: Node, s: Set[String]): Boolean = {
