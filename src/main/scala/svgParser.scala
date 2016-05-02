@@ -24,4 +24,8 @@ object svgParser {
   def fromURL(url: String, preserveWS: Boolean, rule: scala.xml.transform.RuleTransformer) = {
     new svgParser(Source.fromURL(url), preserveWS, rule).initialize
   }
+
+  def fromPath(path: String, preserveWS: Boolean, rule: scala.xml.transform.RuleTransformer) = {
+    new svgParser(Source.fromFile(path), preserveWS, rule).initialize
+  }
 }
