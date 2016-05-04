@@ -19,7 +19,7 @@ Currently this project can:
 - Write documentation
 
 ### Installation
-1. Clone this repository locally with `git clone https://github.com/GeoffreyPS/svg-filters `
+1. Clone this repository locally with `git clone https://github.com/GeoffreyPS/svg-transformers`
 2. If you are missing javac, install Oracle or OpenJDK.
 3. If you are missing `sbt` [install sbt](http://www.scala-sbt.org/release/docs/Setup.html)
 4. Run `sbt build` within your cloned directory
