@@ -1,4 +1,4 @@
-name := "svg-filters"
+name := "svg-transformers"
 
 version := "0.0.1"
 
